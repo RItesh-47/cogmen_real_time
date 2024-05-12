@@ -14,7 +14,7 @@ def func(experiment, trainset, devset, testset, model, opt, sched, args):
     args.gnn_nheads = experiment.get_parameter("GNN_HEAD")
     args.learning_rate = experiment.get_parameter("LR")
     args.wp = experiment.get_parameter("WP")
-    # args.wf = experiment.get_parameter("WF")
+    args.wf = experiment.get_parameter("WF")
     args.use_highway = experiment.get_parameter("HIGHWAY")
     args.class_weight = experiment.get_parameter("CLASS_WEIGHT")
     args.drop_rate = experiment.get_parameter("DROPOUT")
@@ -168,12 +168,12 @@ if __name__ == "__main__":
         default=5,
         help="Past context window size. Set wp to -1 to use all the past context.",
     )
-    # parser.add_argument(
-    #     "--wf",
-    #     type=int,
-    #     default=5,
-    #     help="Future context window size. Set wp to -1 to use all the future context.",
-    # )
+    parser.add_argument(
+        "--wf",
+        type=int,
+        default=0,
+        help="Future context window size. Set wp to -1 to use all the future context.",
+    )
     parser.add_argument("--n_speakers", type=int, default=2, help="Number of speakers.")
     parser.add_argument(
         "--hidden_size", type=int, default=100, help="Hidden size of two layer GCN."

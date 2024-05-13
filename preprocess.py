@@ -566,8 +566,15 @@ if __name__ == "__main__":
         default=False,
         help="uses extracted pose from visual modality",
     )
+    parser.add_argument(
+        "--emotion",
+        type=str,
+        required="False",
+        help="data emotion."
+    )
     parser.add_argument("--split_utterances", type=int, default=-1)
     parser.add_argument("--seed", type=int, default=24, help="Random seed.")
+    
     args = parser.parse_args()
 
     main(args)

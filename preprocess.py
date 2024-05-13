@@ -517,7 +517,7 @@ def main(args):
             + str(args.split_utterances)
             + ".pkl",
         )
-    if args.dataset == "/content/drive/MyDrive/mosei":
+    if args.dataset == "mosei":
         train, dev, test = get_mosei()
         data = {"train": train, "dev": dev, "test": test}
         cogmen.utils.save_pkl(data, "./data/mosei/data_mosei.pkl")

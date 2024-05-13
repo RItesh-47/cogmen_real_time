@@ -435,7 +435,7 @@ def get_mosei():
         video_sentence,
         trainVids,
         test_vids,
-    ) = pickle.load(open(path, "rb"), encoding="latin1")
+    ) = pickle.load(open(mosei_path, "rb"), encoding="latin1")
 
     label_count = []
     len_count = []

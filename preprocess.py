@@ -423,7 +423,7 @@ def get_mosei():
     mosei_path = args.data_dir
     cogmen.utils.set_seed(args.seed)
 
-    feature_path = "categorical.p"
+    feature_path = "mosei.pkl"
     path = os.path.join(mosei_path, feature_path)
     (
         video_ids,

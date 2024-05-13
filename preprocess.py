@@ -548,7 +548,7 @@ if __name__ == "__main__":
         "--dataset",
         type=str,
         required=True,
-        choices=["iemocap", "iemocap_4", "mosei",],
+        choices=["iemocap", "iemocap_4", "mosei","mosei_emotion", "mosei_tbje_7class", "mosei_tbje_2class"],
         help="Dataset name.",
     )
     parser.add_argument(

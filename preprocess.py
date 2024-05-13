@@ -217,7 +217,7 @@ def get_mosei_from_tbje(args):
         dev_vids,
         test_vids,
     ) = pickle.load(
-        open("./data/mosei/tbje_mosei_updated.pkl", "rb"), encoding="latin1"
+        open(args.data_dir + "/tbje_mosei_updated.pkl", "rb"), encoding="latin1"
     )
 
     train, dev, test = [], [], []
@@ -337,7 +337,7 @@ def get_mosei_from_tbje_emotion(args):
         dev_vids,
         test_vids,
     ) = pickle.load(
-        open("./data/mosei/tbje_mosei_" + args.emotion + ".pkl", "rb"),
+        open(args.data_dir + "/tbje_mosei_" + args.emotion + ".pkl", "rb"),
         encoding="latin1",
     )
 

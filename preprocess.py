@@ -517,7 +517,7 @@ def main(args):
             + str(args.split_utterances)
             + ".pkl",
         )
-    if args.dataset == "mosei":
+    if args.dataset == "/content/drive/MyDrive/mosei":
         train, dev, test = get_mosei()
         data = {"train": train, "dev": dev, "test": test}
         cogmen.utils.save_pkl(data, "./data/mosei/data_mosei.pkl")
@@ -548,7 +548,7 @@ if __name__ == "__main__":
         "--dataset",
         type=str,
         required=True,
-        choices=["iemocap", "iemocap_4", "mosei",],
+        choices=["iemocap", "iemocap_4", "/content/drive/MyDrive/mosei",],
         help="Dataset name.",
     )
     parser.add_argument(

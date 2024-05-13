@@ -22,7 +22,14 @@ def load_pkl(file):
 
 
 def main(args):
-    data = load_pkl(f"data/{args.dataset}/data_{args.dataset}.pkl")
+    # data = load_pkl(f"data/{args.dataset}/data_{args.dataset}.pkl")
+    path = os.path.join(
+            args.data_dir_path,
+            args.dataset,
+            "data_" + args.dataset + "_" + args.classes + ".pkl",
+        )
+    data = load_pkl(path)
+
 
     model_dict = torch.load(
         "model_checkpoints/"

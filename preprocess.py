@@ -548,7 +548,7 @@ if __name__ == "__main__":
         "--dataset",
         type=str,
         required=True,
-        choices=["iemocap", "iemocap_4", "/content/drive/MyDrive/mosei",],
+        choices=["iemocap", "iemocap_4", "mosei",],
         help="Dataset name.",
     )
     parser.add_argument(

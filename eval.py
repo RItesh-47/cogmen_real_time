@@ -26,7 +26,7 @@ def main(args):
     path = os.path.join(
             args.data_dir_path,
             args.dataset,
-            "data_" + args.dataset + "_" + args.classes + ".pkl",
+            "data_" + args.dataset + "_" + args.emotion + ".pkl",
         )
     data = load_pkl(path)
 
